@@ -11,6 +11,9 @@ const Weapon = (props) => {
         if (keyCode === 13) {
             event.returnValue = false
             if (event.preventDefault) event.preventDefault()
+            for(let i = 2; i < 6; i++) {
+                event.target.parentNode.parentNode.children[i].children[0].checked = false
+            }
             props.enter(event.target.innerText, weapon, event.target.className.split(" ")[1])
         }
     }
@@ -35,7 +38,11 @@ const App = () => {
     const changeValue = (event) => {
         const weapon = event.target.id.split(" ")[0];
         const level = event.target.id.split(" ")[1];
-        if(parseInt(level) === 3) event.target.checked = false;
+        if(parseInt(level) === 3) {
+            for(let i = 2; i < 6; i++) {
+                event.target.parentNode.parentNode.children[i].children[0].checked = false
+            }
+        }
         fetch("https://hades-weapons-server.onrender.com/weapons", {
             method: "post",
             headers: {
