@@ -42,7 +42,7 @@ body {
 
 table {
     table-layout: fixed;
-    width: 95%;
+    width: 425px;
     border-collapse: collapse;
     margin: 10px;
 }
