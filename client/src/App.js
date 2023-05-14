@@ -28,7 +28,7 @@ const App = () => {
     const [data, setData] = React.useState([]);
     const levels = ["tartarus", "asphodel", "elysium", "styx"];
     React.useEffect(() => {
-        fetch("http://localhost:3001/weapons")
+        fetch("https://hades-weapons-server.onrender.com/weapons")
         .then(res => res.json())
         .then(json => setData(json.weapons));
     }, []);
@@ -36,7 +36,7 @@ const App = () => {
         const weapon = event.target.id.split(" ")[0];
         const level = event.target.id.split(" ")[1];
         if(parseInt(level) === 3) event.target.checked = false;
-        fetch("http://localhost:3001/weapons", {
+        fetch("https://hades-weapons-server.onrender.com/weapons", {
             method: "post",
             headers: {
                 "weapon": weapon,
@@ -48,7 +48,7 @@ const App = () => {
             .then(json => setData(json.weapons))
     }
     function enterValue(newHeat, weapon, level) {
-        fetch("http://localhost:3001/weapons", {
+        fetch("https://hades-weapons-server.onrender.com/weapons", {
             method: "post",
             headers: {
                 "weapon": weapon,
