@@ -28,13 +28,12 @@ app.post("/weapons", (req, res) => {
     const weaponI = req.headers.weapon;
     const level = req.headers.level;
     dataToChange = data.weapons[weaponI];
-    if(req.headers.heat < 0) {
+    if(parseInt(req.headers.heat) < 0) {
         if(parseInt(level) === 3) {
-            console.log("here")
             for(var i = 0; i < 4; i++) {
                 dataToChange.progress[i] = false;
             }
-            dataToChange.heat += 1;
+            dataToChange.heat = parseInt(dataToChange.heat) + 1;
         } else {
             for(var i = level; i > -1; i--) {
                 dataToChange.progress[i] = true;
