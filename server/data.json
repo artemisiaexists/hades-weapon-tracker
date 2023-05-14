@@ -1,0 +1,70 @@
+{
+  "weapons": [
+    {
+      "name": "stygius",
+      "heat": 1,
+      "progress": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "url": "https://hades.fandom.com/wiki/Stygian_Blade"
+    },
+    {
+      "name": "varatha",
+      "heat": "2",
+      "progress": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "url": "https://hades.fandom.com/wiki/Eternal_Spear"
+    },
+    {
+      "name": "aegis",
+      "heat": 0,
+      "progress": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "url": "https://hades.fandom.com/wiki/Shield_of_Chaos"
+    },
+    {
+      "name": "coronacht",
+      "heat": 0,
+      "progress": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "url": "https://hades.fandom.com/wiki/Heart-Seeking_Bow"
+    },
+    {
+      "name": "malphon",
+      "heat": 0,
+      "progress": [
+        true,
+        true,
+        true,
+        false
+      ],
+      "url": "https://hades.fandom.com/wiki/Twin_Fists"
+    },
+    {
+      "name": "exagryph",
+      "heat": 1,
+      "progress": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "url": "https://hades.fandom.com/wiki/Adamant_Rail"
+    }
+  ]
+}

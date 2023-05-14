@@ -1,0 +1,92 @@
+.weaponimgs{
+    width: 50px;
+    height: 50px;
+    display:table-cell;
+}
+
+.weaponimgcont {
+    margin: 10px;
+    display: table;
+}
+
+.weaponimgcell {
+    display:table-cell;
+    vertical-align: middle;
+}
+
+.levelimgs {
+    width: 50px;
+    height: 50px;
+}
+
+#heatimg {
+    height: 30px;
+    margin-right: 5px;
+}
+
+.checkbox {
+    height: 25px;
+    width: 25px;
+}
+
+@font-face {
+    font-family: "Heat";
+    src: url(AlegreyaSans-Bold.ttf) format("truetype");
+}
+
+body {
+    font-family: monospace;
+    font-size: larger;
+
+}
+
+table {
+    table-layout: fixed;
+    width: 95%;
+    border-collapse: collapse;
+    margin: 10px;
+}
+thead th {border-bottom: solid;}
+
+thead th:nth-child(1) {width: 15%;}
+thead th:nth-child(2) {width: 20px;border-style: none solid solid solid;border-color:black;background-color: black;}
+thead th:nth-child(3) {width: 15%;}
+thead th:nth-child(4) {width: 15%;border-style: none solid solid solid;border-color:black;}
+thead th:nth-child(5) {width: 15%;}thead th:nth-child(6) {width: 15%;border-style: none none solid solid;border-color:black;}
+
+tbody td:nth-child(2) {border-style: none solid none solid;border-color:black;background-color: black;}
+tbody td:nth-child(4) {border-style: none solid none solid;border-color:black;}
+tbody td:nth-child(6) {border-style: none none none solid;border-color:black;}
+
+tbody tr {border-style: solid none solid none;border-color:black;}
+tbody tr:nth-child(6) {border-style: initial;}
+
+th, td {padding: 5px;}
+thead th, th {letter-spacing: 2px;}
+td {letter-spacing: 1px;}
+tbody td {text-align: center;}
+
+input[type="checkbox"] {
+    appearance: none;
+    background-color: white;
+    border-style: solid;
+    border-radius:5%;
+}
+input[type="checkbox"]:checked {background-color: black;}
+input[type="checkbox"]:checked:before {
+    content:"";
+    padding: initial;
+    font-weight: bold;
+}
+
+
+#container {
+    margin: 10px
+}
+
+.form {
+    border-style: none;
+    background-color: rgba(0, 0, 0, 0);
+    font-family: 'Heat', sans-serif;
+    font-size: 30px;
+}
