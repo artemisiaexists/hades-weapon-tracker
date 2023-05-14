@@ -61,7 +61,7 @@ const App = () => {
     }
     return (
         <div id="container">
-            <p style={{textAlign: "center"}}>Weapon Heat Tracker</p>
+            <p style={{textAlign: "center", width: "425px"}}>Weapon Heat Tracker</p>
             <table>
                 <thead>
                     <tr>
