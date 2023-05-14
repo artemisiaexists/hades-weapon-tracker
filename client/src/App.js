@@ -18,7 +18,7 @@ const Weapon = (props) => {
         <tr>
             <td key = {5} className="weaponimgcont"><div className="weaponimgcell"><a href = {props.url} target="_blank" rel="noreferrer"><img src={require(`./imgs/${props.name}.png`)} className="weaponimgs" alt = {props.name}/></a></div></td>
             <td key = {6} style={{color: `rgb(255, ${numColor}, 0)`}}><span className="form" role="textbox" contentEditable={true} onKeyPress={disableNewlines}>{props.heat}</span></td>
-            {progress.map((level, i) => { if(level) {return(<td key = {i}><input type="checkbox" className="checkbox" onChange={props.change} checked/></td>)} else { return(<td key = {i}><input type="checkbox" id = {`${weapon} ${i}`} className="checkbox" onChange={props.change}/></td>)}})}
+            {progress.map((level, i) => { if(level) {console.log(level + " it knows the toggle state");return(<td key = {i}><input type="checkbox" className="checkbox" onChange={props.change} checked/></td>)} else { return(<td key = {i}><input type="checkbox" id = {`${weapon} ${i}`} className="checkbox" onChange={props.change}/></td>)}})}
             <td key = {3}><input type="checkbox" id = {`${weapon} 3`} className="checkbox" onChange={props.change}/></td>
         </tr>
     )
