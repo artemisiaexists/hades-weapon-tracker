@@ -1,7 +1,5 @@
 import React from "react";
 import './main.css';
-//https://hades-weapons-server.onrender.com/weapons
-//https://s7klq5-3001.csb.app/weapons
 const Weapon = (props) => {
     const weapon = props.i;
     const progress = [props.progress[0], props.progress[1], props.progress[2]]
@@ -31,7 +29,7 @@ const App = () => {
     const [data, setData] = React.useState([]);
     const levels = ["tartarus", "asphodel", "elysium", "styx"];
     React.useEffect(() => {
-        fetch("https://s7klq5-3001.csb.app/weapons")
+        fetch("https://gabby-principled-red.glitch.me/weapons")
         .then(res => res.json())
         .then(json => setData(json.weapons));
     }, []);
@@ -43,7 +41,7 @@ const App = () => {
                 event.target.parentNode.parentNode.children[i].children[0].checked = false
             }
         }
-        fetch("https://s7klq5-3001.csb.app/weapons", {
+        fetch("https://gabby-principled-red.glitch.me/weapons", {
             method: "post",
             headers: {
                 "weapon": weapon,
@@ -55,7 +53,7 @@ const App = () => {
             .then(json => setData(json.weapons))
     }
     function enterValue(newHeat, weapon, level) {
-        fetch("https://s7klq5-3001.csb.app/weapons", {
+        fetch("https://gabby-principled-red.glitch.me/weapons", {
             method: "post",
             headers: {
                 "weapon": weapon,
